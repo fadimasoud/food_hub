@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>List</title>
+</head>
+<body>
+	{% for object in objects %}
+		<ul>
+			<a href="{% url 'detail' food_id=object.id %}"><li>{{object.name}}</li></a>
+			<li>{{object.description}}</li>
+			<li>{{object.opening_time}}</li>
+			<li>{{object.closing_time}}</li>
+		</ul>
+	{% endfor %}
+</body>
+</html>
